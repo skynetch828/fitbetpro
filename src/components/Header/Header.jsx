@@ -20,9 +20,9 @@ const Header = () => {
   return (
     <div className={"page-header page" + location.pathname.replaceAll("/","-")}>
       <div className="container flex justify-between items-center mx-auto px-4 py-4">
-        <a className="logo" href="/">
+        <span className="logo" onClick={(e) => {navigate("/", {replace: true})}}>
           <img className="logo-image" src={logo_image} alt="" />
-        </a>
+        </span>
         <nav className="main-nav">
           <ul>
             <li className={"menu-item " + isActiveMenuItem("team")} onClick={(e) => {navigate("/team", {replace: true})}}>Team</li>
